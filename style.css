@@ -1,0 +1,603 @@
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ------------------------------------------------------navbar start------------------------------------------------------ */
+
+
+nav {
+    background-color:  #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: fixed; /* Menjadikan navbar tetap berada di atas */
+    top: 0;
+    left: 0;
+    width: 100%; /* Sesuaikan agar memenuhi lebar layar */
+    z-index: 999; /* Agar selalu berada di atas elemen lain */
+    transition: background-color 0.3s ease; /* Menambahkan transisi untuk perubahan warna background */
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+
+}
+
+nav.sticky {
+    background-color: #ffffff; /* Warna navbar berubah ketika di-scroll */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav div img {
+    width: 100px;
+}
+
+/* ---- font pada navbar -----*/
+nav ul li a {
+    text-decoration: none; /* Menghilangkan garis bawah pada teks tautan */
+    color: #191919; /* Mengatur warna teks tautan menjadi #191919 (warna abu-abu tua) */
+    font-weight: 600; /* Mengatur ketebalan teks menjadi semi-bold */
+    padding: 8px 0; /* Menambahkan padding vertikal (atas dan bawah) sebesar 8px */
+    transition: all; /* Mengaktifkan transisi untuk semua perubahan properti */
+    transition-duration: 300ms; /* Durasi transisi diatur selama 300ms (0.3 detik) */
+    border-bottom: 1px solid rgba(12, 116, 116, 0); /* Menambahkan garis bawah transparan (tidak terlihat) */
+    border-radius: 5px; /* Membuat sudut elemen tautan melengkung dengan radius 5px */
+    padding: 10px 15px; /* Menambahkan padding 10px di atas/bawah dan 15px di kiri/kanan dan juga dapat mempengaruhi spasi font navbar*/
+}
+
+/* ---- font pada navbar ----*/
+
+nav ul li a:hover {
+    /* color: #be9448; /* Mengubah warna teks tautan menjadi #be9448 (warna emas) saat di-hover */
+    /* border-bottom: 1px solid #be9448; /* Menambahkan garis bawah berwarna emas saat di-hover */
+    background-color: #be9448; /* Mengubah warna latar belakang tautan menjadi emas saat di-hover */
+}
+
+
+/* ----ikon pada navbar -----*/
+nav .menu-icon {
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: #19191900;
+    color: #000000;
+}
+/* ---ikon pada navbar ------*/
+
+nav .menu-icon:hover {
+    color:  #be9448;
+}
+
+.menu-icon {
+    /* background-color: rgb(12, 116, 116); */
+    font-size: 25px;
+    display: none;
+}
+
+/* ------------------------------------------------------Navbar End------------------------------------------------------ */
+
+/* ------------------------------------------------------hero section------------------------------------------------------ */
+.hero {
+    background-image: url(asset/pantai\ nusa\ dua.jpg); /* untuk merubah gambar background */
+    min-height: 130vh;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: ''; /* Membuat elemen pseudo-elemen kosong setelah elemen dengan kelas .hero */
+    display: block; /* Menampilkan pseudo-elemen sebagai blok */
+    position: absolute; /* Mengatur posisi pseudo-elemen secara absolut relatif terhadap elemen .hero */
+    width: 100%; /* Lebar pseudo-elemen diatur agar menutupi seluruh lebar elemen .hero */
+    height: 30%; /* Tinggi pseudo-elemen diatur menjadi 30% dari tinggi elemen .hero */
+    bottom: 0; /* Meletakkan pseudo-elemen di bagian bawah elemen .hero */
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%); 
+    /* Memberikan latar belakang gradasi dari hitam pekat (rgba(1, 1, 3, 1) pada 8%) menjadi transparan (rgba(255, 255, 255, 0) pada 50%) dari bawah ke atas (0 derajat) */
+}
+
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2
+}
+
+
+.hero .content p {
+    font-size: 1.5rem;
+    margin-top: 0.5;
+    line-height: 1.4;
+    font-weight: 350;
+    color: #fff;
+    
+}
+
+.hero .content .cta {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+    background-color: #be9448;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-decoration: none;
+}
+
+/* Hero Section End */
+
+
+/* ------------------------------------------------------About Us------------------------------------------------------ */
+section p.ringkasan {
+    font-style: italic;
+    font-size: 18px;
+    color: #ababab;
+    margin-bottom: 3rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+section {
+    scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar */
+}
+
+section h3 {
+    font-size: 30px;
+}
+
+section h3::after {
+    content: "";
+    border-bottom: 5px solid #be9448; 
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+
+.layar-dalam {
+    width: 1000px;
+    margin: auto;
+}
+
+#aboutus {
+    text-align: center;
+    padding: 50px 10px 50px 10px;
+    
+}
+
+.aboutus .ringkasan {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.konten {
+    display: flex; /* Mengaktifkan flexbox */
+    justify-content: space-between; /* Memberi jarak di antara elemen */
+    align-items: flex-start; /* Menyelaraskan item ke bagian atas */
+    flex-wrap: wrap; /* Agar elemen bisa turun ke bawah pada layar sempit */
+    gap: 20px; /* Memberikan jarak antar elemen */
+}
+
+.konten-isi {
+    flex: 1; /* Memungkinkan konten teks mengambil ruang yang tersedia */
+    max-width: 50%; /* Batasi lebar maksimum menjadi 50% */
+    text-align: left; /* untuk merubah rata tulisan pada sejarah perusahaan */
+   /* margin-top: -40px; /* untuk menaikan posisi konten, menggunakan -40px dan untuk menurunkan konten menggunakan 40px */
+}
+
+.video-container {
+    flex: 1;
+    width: 350px; /* Atur lebar video menjadi 300px */
+    height: 400px; /* Atur tinggi video menjadi 300px untuk membuat persegi */
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    border-radius: 10px; /* Sudut membulat pada video */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Menggunakan 100% untuk menyesuaikan dengan wadah */
+    object-fit: cover; /* Menambahkan properti ini agar video memenuhi frame */
+    border: 0;
+}
+
+
+/* ------------------------------------------------------About Us-------------------------------------------------------- */
+
+/* ------------------------------------------------------Produk---------------------------------------------------------- */
+#menu {
+    text-align: center;
+    padding: 50px 10px 50px 10px;
+    background-color: #fff;
+    
+}
+
+.menu h2,
+.contact h2{
+    margin-bottom: 1rem;
+}
+
+.menu p{
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.menu .menu-card {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.menu .row .menu-card img {
+    /* border-radius: 50%; */
+    border-radius: 5px;
+    width: 80%;
+}
+
+.menu .row .menu-card .menu-card-title {
+    margin: 1rem auto 0.5rem;
+}
+
+.menu .row .Pesan {
+    font-size: medium;
+    color: aqua;
+}
+
+.menu .row .cta1 {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1 rem;
+    color: #fff;
+    background-color: #be9448;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------Produk---------------------------------------------------------- */
+
+/* ------------------------------------------------------Gallery--------------------------------------------------------- */
+#gallery {
+    text-align: center; /* <!-- Mengatur teks di dalam elemen dengan id 'gallery' menjadi rata tengah --> */
+    padding: 50px 10px 50px 10px; /* <!-- Menambahkan jarak pada bagian atas, kanan, bawah, dan kiri elemen 'gallery' --> */
+}
+
+.gallery p{
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.gallery .gallery1 {
+    display: flex; /* <!-- Mengatur elemen dalam container ini menggunakan Flexbox untuk mengatur tata letaknya --> */
+    justify-content: center; /* <!-- Membuat konten di dalam 'gallery1' rata tengah secara horizontal --> */
+    gap: 20px; /* <!-- Menambahkan jarak antar gambar sebanyak 20px --> */
+    flex-wrap: wrap; /* <!-- Mengatur agar item di dalamnya dapat berpindah ke baris baru jika tidak cukup tempat --> */
+    padding-bottom: 4rem; /* <!-- Memberikan jarak (padding) 4 rem di bagian bawah elemen --> */
+    padding-top: 50px; /* <!-- Memberikan jarak (padding) 50px di bagian atas elemen --> */
+}
+
+.gallery .gallery-img {
+    width: 400px; /* <!-- Mengatur lebar setiap gambar menjadi 300px --> */
+    height: 200px; /* <!-- Mengatur tinggi setiap gambar menjadi 200px --> */
+    object-fit: cover; /* <!-- Membuat gambar menutupi seluruh area dengan proporsi yang tetap, memotong bagian yang tidak muat --> */
+    border-radius: 5px; /* <!-- Menambahkan radius 5px pada sudut gambar, memberikan efek lengkung pada sudut-sudutnya --> */
+}
+
+.gallery .gallery-img1 {
+     width: 300px; /* <!-- Mengatur lebar setiap gambar menjadi 300px --> */
+     height: 200px; /* <!-- Mengatur tinggi setiap gambar menjadi 200px --> */
+     object-fit: cover; /* <!-- Membuat gambar menutupi seluruh area dengan proporsi yang tetap, memotong bagian yang tidak muat --> */
+     border-radius: 5px; /* <!-- Menambahkan radius 5px pada sudut gambar, memberikan efek lengkung pada sudut-sudutnya --> */
+ }
+
+ .gallery .gallery-img2 {
+    width: 600px; /* <!-- Mengatur lebar setiap gambar menjadi 300px --> */
+    height: 350px; /* <!-- Mengatur tinggi setiap gambar menjadi 200px --> */
+    object-fit: cover; /* <!-- Membuat gambar menutupi seluruh area dengan proporsi yang tetap, memotong bagian yang tidak muat --> */
+    border-radius: 5px; /* <!-- Menambahkan radius 5px pada sudut gambar, memberikan efek lengkung pada sudut-sudutnya --> */
+ }
+
+ .gallery .gallery-img3 {
+    width: 300px; /* <!-- Mengatur lebar setiap gambar menjadi 300px --> */
+    height: 350px; /* <!-- Mengatur tinggi setiap gambar menjadi 200px --> */
+    object-fit: cover; /* <!-- Membuat gambar menutupi seluruh area dengan proporsi yang tetap, memotong bagian yang tidak muat --> */
+    border-radius: 5px; /* <!-- Menambahkan radius 5px pada sudut gambar, memberikan efek lengkung pada sudut-sudutnya --> */
+ }
+/* ------------------------------------------------------Gallery------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------kontact------------------------------------------------------ */
+
+.contact {
+    max-width: 1200px; /* Membatasi lebar maksimum konten menjadi 1200px */
+    margin: 0 auto; /* Memusatkan konten secara horizontal di dalam elemen induk */
+    padding: 50px 20px; /* Memberikan jarak bagian dalam (padding) konten atas-bawah 50px, kiri-kanan 20px */
+    gap: 30px;
+    
+}
+
+.contact h3 {
+    font-size: 2 rem; /* Mengatur ukuran teks judul (h3) menjadi 2.5 rem */
+    margin-bottom: 1rem; /* Memberikan jarak bawah 1rem untuk elemen di bawahnya */
+    text-align: center; /* Memusatkan teks */
+} 
+
+.contact p{
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+} 
+.row {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-between; /* Menyediakan jarak antara elemen */
+    align-items: flex-start; /* Menyelaraskan item ke bagian atas */
+    margin-top: 20px; /* Opsional: menambah ruang di atas */
+    margin-left: 20px;
+}
+
+iframe {
+    border-radius: 15px; /* Menambahkan border-radius pada peta */
+    border: 0; /* Menghilangkan border default */
+    width: 600px;
+    height: 300px;
+}
+
+.contact-info {
+    flex: 1; /* Memungkinkan div ini mengambil ruang yang tersedia */
+    margin-left: 50px; /* Menambah ruang antara peta dan informasi kontak */
+}
+
+.contact-icons {
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Mengatur elemen dalam kolom */
+    align-items: flex-start; /* Menyelaraskan item ke kiri */
+}
+
+.icon-wrapper {
+    display: flex; /* Menggunakan flex untuk penataan */
+    align-items: center; /* Menyelaraskan ikon secara vertikal */
+    margin-bottom: 15px; /* Menambah ruang antara ikon dan span di bawahnya */
+}
+
+.contact-icons a {
+    margin-right: 8px; /* Ruang antara ikon dan teks */
+}
+
+.icon-wrapper a {
+    color: rgb(0, 0, 0); /* Mengubah warna teks menjadi hitam */
+    text-decoration: none; /* Menghilangkan garis bawah pada tulisan (underline) */
+}
+
+.contact .icon-wrapper a:hover{
+    color: #be9448;
+}
+/* ------------------------------------------------------kontak------------------------------------------------------ */
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    box-shadow: 3px 1px 8px rgba(1, 1, 3, 0.5);
+    z-index: 999;
+}
+
+footer .socials {
+    padding: 1rem 0 3rem;
+}
+
+footer .socials a {
+    color: #ffffff;
+    margin: 1rem;
+}
+
+footer .socials a:hover {
+    color: #be9448;
+}
+
+footer .links a:hover {
+    color: #000000;
+    background-color: #be9448;
+    border-radius: 5px;
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #000000;
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+    
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit p{
+    color: #000000;
+}
+
+footer .credit a {
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.credit a:hover {
+    color: #be9448;
+}
+
+@media (min-width: 1024px) {
+    .video-container {
+        max-width: 80%; /* Sesuaikan nilai ini untuk mengecilkan ukuran di desktop */
+        margin: 0 auto; /* Untuk membuatnya tetap berada di tengah */
+    }
+
+    .contact .row .map {
+        height: 30rem;
+    }
+
+    .contact .row form {
+        padding-top: 0;
+    }
+}
+
+
+
+@media only screen and (max-width : 768px) {
+    section {
+        scroll-margin-top: 100px; /* Sesuaikan dengan tinggi navbar di tampilan mobile */
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+    nav {
+        flex-wrap: wrap;
+       /* position: fixed;
+        width: 100%; */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.hidden {
+        display: none;
+    }
+
+
+    /* ---------------about us----------------*/
+    .konten {
+        flex-direction: column; /* Mengatur elemen menjadi kolom */
+        align-items: center; /* Menyelaraskan elemen di tengah */
+    }
+
+    .konten-isi, .video-container {
+        max-width: 100%; /* Memastikan elemen mengisi lebar penuh */
+        width: 100%; /* Atur lebar menjadi 100% */
+    }
+
+    .video-container {
+        height: auto; /* Atur tinggi video menjadi otomatis agar sesuai dengan rasio */
+        padding-bottom: 56.25%; /* Tetap menjaga rasio aspek 16:9 */
+    }
+
+    .video-container iframe {
+        height: 100%; /* Menggunakan 100% untuk menyesuaikan dengan wadah */
+    }
+    /* ---------------about us----------------*/
+
+    /* --------------gallery -------------------------*/
+    .gallery .gallery1 {
+        justify-content: center;
+        gap: 10px; /* Mengurangi jarak antar gambar pada layar lebih kecil */
+    }
+
+    .gallery .gallery-img, .gallery .gallery-img1 {
+        width: 250px; /* Mengurangi lebar gambar agar lebih sesuai di layar tablet */
+        height: 170px; 
+    }
+    /* --------------gallery -------------------------*/
+
+
+
+
+    /* -------------- kontak -------------------------*/
+    .menu-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    .contact-info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .contact-icons {
+        align-items: center; /* untuk mengatur posisi ikon media sosial pada halaman kontak */
+    }
+
+    .icon-wrapper {
+        justify-content: center;
+    }
+   
+}
+/* -------------- kontak -------------------------*/
+
+
+
+@media only screen and (max-width: 480px) {
+    .gallery .gallery1 {
+        justify-content: center; /* Tetap rata tengah */
+    }
+
+    .gallery .gallery-img, .gallery .gallery-img1, .gallery .gallery-img3 {
+        width: 150px; /* Mengubah ukuran gambar agar lebih kecil di layar mobile */
+        height: 100px;
+    }
+
+    .gallery .gallery-img2 {
+        width: 300px; /* Mengubah ukuran gambar agar lebih kecil di layar mobile */
+        height: 200px;
+    }
+}
